@@ -74,6 +74,7 @@ export const HamburgerContainer = styled.div`
   top: 96px;
   left: 0%;
   font-family: var(--mono);
+  z-index: 999;
 `;
 
 export const HamburgerList = styled.div`
