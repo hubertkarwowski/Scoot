@@ -1,101 +1,49 @@
-import "../../globalStyles/colors.css";
-import "../../globalStyles/typography.css";
-
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
-export const NavbarContainer = styled.nav`
-  background-color: var(--white);
-  width: 100%;
-  height: 96px;
+export const NavbarWrapper = styled.nav`
+  min-width: 100%;
+  min-height: 96px;
   display: flex;
   justify-content: space-around;
-  text-align: center;
+  align-items: center;
 `;
-
-export const NavbarMenu = styled.ul`
+export const NavigationDiv = styled.div`
+  font-family: ${({ theme }) => theme.mono};
+  margin-right: 25%;
+`;
+export const Navigation = styled.ul`
   display: flex;
   list-style-type: none;
-  font-family: var(--mono);
-  padding: 0;
-  min-width: 55%;
-  margin: auto 0;
 `;
-
-export const NavbarLogo = styled.li`
-  font-size: 48px;
-  margin-right: 50px;
-  @media (max-width: 375px) {
-    font-size: 30px;
+export const NavLogo = styled.li`
+  font-size: 3rem;
+  color: ${({ theme }) => theme.dark};
+  @media (max-width: ${({ theme }) => theme.medium}) {
+    margin-left: 2.7rem;
+    font-size: 2rem;
   }
 `;
-
-export const NavbarLink = styled(Link)`
-  text-decoration: none;
-  color: var(--dark);
-  margin: auto 0;
-  margin-right: 32px;
-`;
-
-export const NavbarLinkList = styled(NavbarLink)`
-  color: var(--grey);
+export const NavList = styled.li`
+  color: ${({ theme }) => theme.grey};
   &:hover {
-    color: var(--yellow);
+    color: ${({ theme }) => theme.yellow};
   }
-`;
-export const NavbarList = styled.li`
-  @media (max-width: 375px) {
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     display: none;
   }
 `;
-
-export const ButtonContainer = styled.div`
-  margin: auto 0;
-  @media (max-width: 375px) {
+export const NavButton = styled.div`
+  margin-right: 13%;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     display: none;
   }
 `;
-
-export const NavbarHamburger = styled.div`
-  display: none;
-  @media (max-width: 375px) {
-    display: inline-block;
-    margin-right: 70px;
-    cursor: pointer;
-  }
-`;
-
-export const HamburgerContainer = styled.div`
-  height: 100vh;
-  width: 250px;
-  background-color: var(--dark);
-  position: absolute;
-  top: 96px;
-  left: 0%;
-  font-family: var(--mono);
-  z-index: 999;
-`;
-
-export const HamburgerList = styled.div`
-  margin-top: 50px;
-  list-style: none;
-`;
-
-export const HamburgerItem = styled.div`
-  margin-bottom: 20px;
-  margin-left: 20px;
-  text-align: left;
-`;
-
-export const HamburgerLink = styled(Link)`
+export const NavLink = styled(Link)`
   text-decoration: none;
-  color: var(--white);
-  &:hover {
-    color: var(--yellow);
+  margin-left: 15%;
+  @media (max-width: ${({ theme }) => theme.medium}) {
+    margin-left: 10%;
   }
-`;
-
-export const HamburgerButton = styled.div`
-  margin-top: 80%;
 `;

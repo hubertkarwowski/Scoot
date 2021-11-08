@@ -1,19 +1,21 @@
-import "./colors.css";
-import "./typography.css";
 import styled from "styled-components";
 
 export const Button = styled.button`
-  border: 2px solid var(--yellow);
+  border: 2px solid ${({ theme }) => theme.yellow};
   text-align: center;
-  color: var(--white);
-  background-color: var(--yellow);
+  color: ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.yellow};
   width: 195px;
   height: 53px;
-  font-family: var(--mono);
+  font-family: ${({ theme }) => theme.mono};
   font-size: 15px;
   &:hover {
-    background-color: var(--white);
-    color: var(--yellow);
+    background-color: ${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.yellow};
     cursor: pointer;
+  }
+  @media (max-width: 475px) {
+    width: 120px;
+    height: 38px;
   }
 `;

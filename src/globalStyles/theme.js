@@ -1,0 +1,15 @@
+export const theme = {
+  yellow: "#fcb72b",
+  dark: "#495567",
+  grey: " #939caa",
+  lgrey: "#e5ecf4",
+  snow: "#f2f5f9",
+  lyellow: "#fff4df",
+  white: "#ffffff",
+  mobile: "575px",
+  medium: "768px",
+  large: "1024px",
+  xlarge: "1440px",
+  mono: "Space Mono",
+  lexend: "Lexend Deca",
+};

@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  ArrowContainer,
+  ArrowDiv,
   ButtonContainer,
-  CircleContainer,
+  CircleDiv,
   HeroContainer,
   HeroHeading,
   HeroSubHeading,
-  LineContainer,
+  LineDiv,
 } from "./HeroStyles.js";
 import { ReactComponent as Arrow } from "../../assets/patterns/right-arrow.svg";
 import { ReactComponent as Line } from "../../assets/patterns/line.svg";
@@ -22,16 +22,15 @@ function Hero() {
         nearest bike, unlock it with a tap, and you’re away!
       </HeroSubHeading>
       <ButtonContainer>Get Scootin</ButtonContainer>
-
-      <LineContainer>
-        <Line />
-      </LineContainer>
-      <ArrowContainer>
+      <ArrowDiv>
         <Arrow />
-      </ArrowContainer>
-      <CircleContainer>
+      </ArrowDiv>
+      <CircleDiv>
         <Circles />
-      </CircleContainer>
+      </CircleDiv>
+      <LineDiv>
+        <Line />
+      </LineDiv>
     </HeroContainer>
   );
 }

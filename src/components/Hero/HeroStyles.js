@@ -1,6 +1,3 @@
-import "../../globalStyles/colors.css";
-import "../../globalStyles/typography.css";
-
 import MobileHero from "../../assets/images/home-hero-mobile.jpg";
 import TabletHero from "../../assets/images/home-hero-tablet.jpg";
 import DesktopHero from "../../assets/images/home-hero-desktop.jpg";
@@ -17,85 +14,85 @@ export const HeroContainer = styled.div`
   background-image: url(${MobileHero});
   background-size: 100%;
   background-repeat: no-repeat;
-  min-height: 650px;
-  color: var(--white);
+  min-height: 555px;
+  color: ${({ theme }) => theme.white};
   position: relative;
   overflow-x: hidden;
-  @media (min-width: 768px) {
+  @media (min-width: ${({ theme }) => theme.medium}) {
     background-image: url(${TabletHero});
   }
-  @media (min-width: 1440px) {
+  @media (min-width: ${({ theme }) => theme.xlarge}) {
     background-image: url(${DesktopHero});
     text-align: left;
   }
 `;
 export const HeroHeading = styled.h2`
+  font-family: ${({ theme }) => theme.mono};
+  font-size: 40px;
   margin-top: 100px;
   margin-bottom: 40px;
-  @media (min-width: 768px) {
+  @media (min-width: ${({ theme }) => theme.medium}) {
     width: 15ch;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: ${({ theme }) => theme.large}) {
+    font-size: 48px;
+  }
+  @media (min-width: ${({ theme }) => theme.xlarge}) {
     font-size: 56px;
-    margin-right: 900px;
-    margin-top: 190px;
+    margin-right: 35%;
   }
 `;
 export const HeroSubHeading = styled.p`
+  font-size: 1rem;
+  font-family: ${({ theme }) => theme.lexend};
   width: 33ch;
-  margin-bottom: 30px;
-  @media (min-width: 768px) {
+  margin-bottom: 10px;
+  @media (min-width: ${({ theme }) => theme.medium}) {
     width: 63ch;
     margin-bottom: 70px;
   }
-  @media (min-width: 1440px) {
-    width: 45ch;
-    margin-right: 500px;
-    margin-top: 10px;
-  }
-`;
-
-export const ArrowContainer = styled.div`
-  position: absolute;
-  top: 70%;
-  right: 65%;
-  @media (min-width: 768px) {
-    right: 60%;
-  }
-  @media (min-width: 1440px) {
-    right: 10%;
-    top: 60%;
-  }
-`;
-
-export const CircleContainer = styled.div`
-  display: none;
-  @media (min-width: 768px) {
-    display: inline;
-    position: absolute;
-    top: 81.5%;
-    left: 74%;
-  }
-  @media (min-width: 1440px) {
-    display: inline;
-    position: absolute;
-    top: 71.5%;
-    left: 98%;
-  }
-`;
-
-export const LineContainer = styled.div`
-  display: none;
-  @media (min-width: 1440px) {
-    display: inline;
-    position: absolute;
-    top: 60%;
-    right: 90%;
+  @media (min-width: ${({ theme }) => theme.xlarge}) {
+    margin-right: 30%;
+    margin-top: 30px;
+    width: 46ch;
   }
 `;
 
 export const ButtonContainer = styled(Button)`
-  @media (min-width: 1440px) {
-    margin-right: 720px;
+  @media (min-width: ${({ theme }) => theme.xlarge}) {
+    margin-right: 50%;
+  }
+`;
+
+export const ArrowDiv = styled.div`
+  position: absolute;
+  top: 70%;
+  right: 60%;
+  @media (min-width: ${({ theme }) => theme.large}) {
+    right: 70%;
+  }
+  @media (min-width: ${({ theme }) => theme.xlarge}) {
+    top: 53%;
+    right: 15%;
+  }
+`;
+
+export const CircleDiv = styled.div`
+  display: none;
+  @media (min-width: ${({ theme }) => theme.mobile}) {
+    display: inline-block;
+    position: absolute;
+    top: 84%;
+    left: 85%;
+  }
+`;
+
+export const LineDiv = styled.div`
+  display: none;
+  @media (min-width: ${({ theme }) => theme.xlarge}) {
+    display: block;
+    position: absolute;
+    top: 52.7%;
+    left: 0;
   }
 `;

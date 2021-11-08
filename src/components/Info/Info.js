@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "../../globalStyles/button";
 import {
+  ButtonDiv,
+  CircleImg,
   Heading,
   ImageContainer,
   InfoDiv,
@@ -8,11 +10,12 @@ import {
   SubHeading,
   TextContainer,
 } from "./InfoStyles";
-import "./styles.css";
 
 import Img1 from "../../assets/images/telemetry.jpg";
 import Img2 from "../../assets/images/near-you.jpg";
 import Img3 from "../../assets/images/payments.jpg";
+import Circle from "../../assets/patterns/circle.svg";
+import { CircleDiv } from "../Hero/HeroStyles";
 
 function Info() {
   return (
@@ -20,6 +23,8 @@ function Info() {
       <InfoDiv>
         <ImageContainer>
           <img src={Img1} alt="img1" />
+
+          <img className="circle" src={Circle} alt="img1" />
         </ImageContainer>
         <TextContainer>
           <Heading>Easy to use riding telemetry</Heading>
@@ -29,12 +34,16 @@ function Info() {
             your traveling distance, and many more things all in an easy to use
             app.
           </SubHeading>
-          <Button>Learn More</Button>
+          <ButtonDiv>
+            <Button>Learn More</Button>
+          </ButtonDiv>
         </TextContainer>
       </InfoDiv>
       <InfoDiv>
         <ImageContainer>
           <img src={Img2} alt="img2" />
+
+          <img className="circle2" src={Circle} alt="img1" />
         </ImageContainer>
         <TextContainer>
           <Heading>Coming to a city near you</Heading>
@@ -44,12 +53,16 @@ function Info() {
             hometown. We’re aiming to let our scooters loose on 23 cities over
             the coming year.
           </SubHeading>
-          <Button>Learn More</Button>
+          <ButtonDiv>
+            <Button>Learn More</Button>
+          </ButtonDiv>
         </TextContainer>
       </InfoDiv>
       <InfoDiv>
         <ImageContainer>
           <img src={Img3} alt="img3" />
+
+          <img className="circle" src={Circle} alt="img1" />
         </ImageContainer>
         <TextContainer>
           <Heading>Zero hassle payments</Heading>
@@ -59,7 +72,9 @@ function Info() {
             app. Need to pay later? No worries! You can defer payment for up to
             a month.
           </SubHeading>
-          <Button>Learn More</Button>
+          <ButtonDiv>
+            <Button>Learn More</Button>
+          </ButtonDiv>
         </TextContainer>
       </InfoDiv>
     </InfoSection>

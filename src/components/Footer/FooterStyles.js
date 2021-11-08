@@ -1,122 +1,111 @@
-import "../../globalStyles/colors.css";
-import "../../globalStyles/typography.css";
-
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const FooterContainer = styled.footer`
-  margin-top: 70px;
+export const FooterWrapper = styled.footer`
+  width: 100%;
+  font-family: ${({ theme }) => theme.mono};
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 `;
-export const FooterUpper = styled.div`
+export const UpperDiv = styled.div`
+  background-color: ${({ theme }) => theme.dark};
   position: relative;
-  display: flex;
-  align-items: center;
-  min-width: 100%;
-  min-height: 300px;
-  background-color: var(--dark);
-  @media (max-width: 375px) {
-    flex-direction: column;
-    justify-content: center;
-  }
-`;
-export const FooterText = styled.div`
-  width: 50%;
-  @media (max-width: 375px) {
-    width: 100%;
-  }
-`;
-export const Text = styled.h2`
-  display: flex;
-  margin: 0 auto;
-  width: 15ch;
-  color: var(--white);
-  @media (max-width: 375px) {
-    text-align: center;
+  h2 {
     font-size: 32px;
-    width: 17ch;
+    width: 90%;
+    text-align: center;
+    color: ${({ theme }) => theme.white};
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    @media (min-width: 375px) {
+      width: 70%;
+    }
+    @media (min-width: ${({ theme }) => theme.mobile}) {
+      font-size: 48px;
+    }
+  }
+  @media (min-width: ${({ theme }) => theme.large}) {
+    display: flex;
+    h2 {
+      text-align: left;
+      width: 40%;
+    }
+  }
+  @media (min-width: 1839px) {
+    padding: 24px 0;
   }
 `;
-export const Buttons = styled.div`
+export const Images = styled.div`
   display: flex;
   justify-content: center;
-  width: 50%;
-`;
-
-export const ButtonContainer = styled.div`
-  margin-right: 20px;
-  @media (max-width: 375px) {
-    margin: 0 auto;
-    margin-top: 20px;
+  margin-bottom: 100px;
+  img {
+    margin: 0 5px;
+    height: 40px;
+  }
+  @media (min-width: ${({ theme }) => theme.large}) {
+    margin: auto 10%;
   }
 `;
-export const CirclesContainer = styled.div`
+
+export const CirclesDiv = styled.div`
   position: absolute;
-  bottom: -2%;
-  left: 50%;
+  top: 169px;
+  right: -20%;
+  @media (min-width: ${({ theme }) => theme.large}) {
+    right: -10%;
+    top: 28px;
+  }
 `;
 
-export const FooterLower = styled.div`
+export const BottomDiv = styled.div`
   background-color: #333a44;
-  font-family: var(--mono);
-  height: 96px;
-  @media (max-width: 375px) {
-    height: 438px;
-  }
-`;
-
-export const Navigation = styled.nav`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  @media (max-width: 375px) {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-`;
-export const NavLinks = styled.div``;
-export const NavList = styled.ul`
-  @media (max-width: 375px) {
+  text-align: center;
+  nav {
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
+    ul {
+      list-style-type: none;
+      li {
+        margin: 15px auto;
+      }
+    }
   }
-`;
-export const NavLink = styled(Link)`
-  text-decoration: none;
+  @media (min-width: ${({ theme }) => theme.mobile}) {
+    nav {
+      flex-direction: row;
+      justify-content: space-around;
+      ul {
+        display: flex;
 
-  margin-left: 40px;
-  color: var(--grey);
+        li {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+`;
+export const LinkStyledLogo = styled(Link)`
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: ${({ theme }) => theme.white};
+`;
+export const LinkStyled = styled(LinkStyledLogo)`
+  font-size: 1rem;
+  color: ${({ theme }) => theme.grey};
   &:hover {
-    color: var(--yellow);
-  }
-  @media (max-width: 375px) {
-    margin-top: 20px;
+    color: ${({ theme }) => theme.yellow};
   }
 `;
-export const NavLinkLogo = styled(NavLink)`
-  color: var(--white);
-  font-size: 48px;
-  &:hover {
-    color: var(--white);
+export const Icons = styled.div`
+  margin-top: 60px;
+  i {
+    margin: 0 10px;
   }
-  @media (max-width: 375px) {
-    margin-bottom: 30px;
-  }
-`;
-export const NavIcons = styled.div`
-  @media (max-width: 375px) {
-    margin-top: 50px;
-  }
-`;
-export const IconsList = styled.ul`
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-`;
-export const Icon = styled.li`
-  margin-left: 20px;
-  &:hover {
-    cursor: pointer;
+  @media (min-width: ${({ theme }) => theme.mobile}) {
+    margin: 0;
   }
 `;

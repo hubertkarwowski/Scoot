@@ -1,11 +1,11 @@
-:root {
-  --mono: "Space Mono", monospace;
-  --lexend: "Lexend Deca", sans-serif;
-}
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -44,3 +44,5 @@ h4 {
   line-height: 28px;
   letter-spacing: -1.07px;
 }
+
+`;

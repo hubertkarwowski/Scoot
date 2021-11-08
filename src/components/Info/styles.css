@@ -1,9 +1,0 @@
-img {
-  border-radius: 50%;
-  width: 310px;
-}
-@media screen and (min-width: 768px) {
-  img {
-    width: 445px;
-  }
-}

@@ -2,18 +2,11 @@ import React from "react";
 import { ReactComponent as Locate } from "../../assets/icons/locate.svg";
 import { ReactComponent as Scooter } from "../../assets/icons/scooter.svg";
 import { ReactComponent as Ride } from "../../assets/icons/ride.svg";
-import { ReactComponent as Line } from "../../assets/patterns/line-white.svg";
+
 import {
   Heading,
   Icon,
   InfoContainer,
-  LineContainer,
-  LineContainer2,
-  LineContainer3,
-  LineContainer4,
-  LineContainer5,
-  LineContainer6,
-  LineContainer7,
   StepsContainer,
   StepsDiv,
   SubHeading,
@@ -22,27 +15,6 @@ import {
 function StepsSection() {
   return (
     <StepsContainer>
-      <LineContainer>
-        <Line />
-      </LineContainer>
-      <LineContainer2>
-        <Line />
-      </LineContainer2>
-      <LineContainer3>
-        <Line />
-      </LineContainer3>
-      <LineContainer4>
-        <Line />
-      </LineContainer4>
-      <LineContainer5>
-        <Line />
-      </LineContainer5>
-      <LineContainer6>
-        <Line />
-      </LineContainer6>
-      <LineContainer7>
-        <Line />
-      </LineContainer7>
       <StepsDiv>
         <Icon>
           <Locate />

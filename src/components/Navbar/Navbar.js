@@ -1,69 +1,62 @@
 import React, { useState } from "react";
-
-import { ReactComponent as Hamburger } from "../../assets/icons/hamburger.svg";
-
 import { Button } from "../../globalStyles/button";
 import {
-  NavbarContainer,
-  NavbarLogo,
-  NavbarMenu,
-  ButtonContainer,
-  NavbarList,
-  NavbarLink,
-  NavbarLinkList,
-  NavbarHamburger,
-  HamburgerContainer,
-  HamburgerList,
-  HamburgerItem,
-  HamburgerLink,
-  HamburgerButton,
+  NavbarWrapper,
+  NavButton,
+  Navigation,
+  NavigationDiv,
+  NavLink,
+  NavList,
+  NavLogo,
 } from "./NavbarStyles";
+import { ReactComponent as Burger } from "../../assets/icons/hamburger.svg";
+import { ReactComponent as Close } from "../../assets/icons/close.svg";
+import SideDrawer from "./SideDrawer";
+import { Fragment } from "react";
+import { BurgerPlaceholder } from "./SideDrawerStyles";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
+  const drawerToggleClickHandler = () => {
+    console.log("lmao");
+    setSideDrawerOpen(!sideDrawerOpen);
+  };
+  let sideDrawer;
+
+  if (sideDrawerOpen) {
+    sideDrawer = <SideDrawer />;
+  }
   return (
-    <NavbarContainer>
-      <NavbarMenu>
-        <NavbarHamburger onClick={() => setOpen(!open)}>
-          <Hamburger />
-        </NavbarHamburger>
-        <NavbarLogo>
-          <NavbarLink to="/" exact>
-            scoot
-          </NavbarLink>
-        </NavbarLogo>
-        <NavbarList>
-          <NavbarLinkList to="/about">About</NavbarLinkList>
-        </NavbarList>
-        <NavbarList>
-          <NavbarLinkList to="/location">Location</NavbarLinkList>
-        </NavbarList>
-        <NavbarList>
-          <NavbarLinkList to="/career">Career</NavbarLinkList>
-        </NavbarList>
-      </NavbarMenu>
-      <ButtonContainer>
-        <Button>Get Scootin</Button>
-      </ButtonContainer>
-      {open === true ? (
-        <HamburgerContainer>
-          <HamburgerList>
-            <HamburgerItem>
-              <HamburgerLink to="/about">About</HamburgerLink>
-            </HamburgerItem>
-            <HamburgerItem>
-              <HamburgerLink to="/location">Location</HamburgerLink>
-            </HamburgerItem>
-            <HamburgerItem>
-              <HamburgerLink to="/career">Career</HamburgerLink>
-            </HamburgerItem>
-          </HamburgerList>
-          <HamburgerButton>
-            <Button>Get scootin</Button>
-          </HamburgerButton>
-        </HamburgerContainer>
-      ) : null}
-    </NavbarContainer>
+    <Fragment>
+      <NavbarWrapper>
+        <BurgerPlaceholder>
+          <Burger onClick={() => drawerToggleClickHandler()} />
+        </BurgerPlaceholder>
+        <NavigationDiv>
+          <Navigation>
+            <NavLink exact to="/">
+              <NavLogo>scoot</NavLogo>
+            </NavLink>
+
+            <NavLink to="/about">
+              <NavList>About</NavList>
+            </NavLink>
+
+            <NavLink exact to="/location">
+              <NavList>Location</NavList>
+            </NavLink>
+
+            <NavLink exact to="/careers">
+              <NavList>Careers</NavList>
+            </NavLink>
+          </Navigation>
+        </NavigationDiv>
+        <NavButton>
+          <Button>Get Scootin</Button>
+        </NavButton>
+      </NavbarWrapper>
+      {sideDrawer}
+    </Fragment>
   );
 }
 
