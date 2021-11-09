@@ -33,6 +33,6 @@ export const HeroWrapper = styled.section`
   h2 {
     color: ${({ theme }) => theme.white};
     font-size: 40px;
-    font-family: ${({ theme }) => theme.mono};
+    font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   }
 `;

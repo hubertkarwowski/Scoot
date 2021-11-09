@@ -20,7 +20,7 @@ export const List = styled.ul`
 export const Links = styled(Link)`
   text-decoration: none;
   font-size: 1rem;
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   color: ${({ theme }) => theme.snow};
   margin-top: 15%;
 `;

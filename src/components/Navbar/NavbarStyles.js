@@ -10,7 +10,7 @@ export const NavbarWrapper = styled.nav`
   align-items: center;
 `;
 export const NavigationDiv = styled.div`
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   margin-right: 25%;
 `;
 export const Navigation = styled.ul`

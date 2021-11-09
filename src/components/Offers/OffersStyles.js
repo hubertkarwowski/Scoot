@@ -18,13 +18,13 @@ export const Card = styled.div`
   text-align: center;
   h2 {
     font-size: 18px;
-    font-family: ${({ theme }) => theme.mono};
+    font-family: ${({ theme }) => theme.mono}, Sans-Serif;
     color: ${({ theme }) => theme.dark};
   }
   p {
     padding: 10px 0;
     color: ${({ theme }) => theme.dark};
-    font-family: ${({ theme }) => theme.lexend};
+    font-family: ${({ theme }) => theme.lexend}, Sans-Serif;
   }
   button {
     margin: 0 auto;

@@ -27,7 +27,7 @@ export const HeroContainer = styled.div`
   }
 `;
 export const HeroHeading = styled.h2`
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   font-size: 40px;
   margin-top: 100px;
   margin-bottom: 40px;
@@ -44,7 +44,7 @@ export const HeroHeading = styled.h2`
 `;
 export const HeroSubHeading = styled.p`
   font-size: 1rem;
-  font-family: ${({ theme }) => theme.lexend};
+  font-family: ${({ theme }) => theme.lexend}, Sans-Serif;
   width: 33ch;
   margin-bottom: 10px;
   @media (min-width: ${({ theme }) => theme.medium}) {

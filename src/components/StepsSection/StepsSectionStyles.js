@@ -36,7 +36,7 @@ export const InfoContainer = styled.div`
 export const Heading = styled.h2`
   font-size: 20px;
   color: ${({ theme }) => theme.dark};
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   margin: 20px 0;
   @media (min-width: ${({ theme }) => theme.medium}) {
     margin: 0;
@@ -46,7 +46,7 @@ export const Heading = styled.h2`
 `;
 export const SubHeading = styled.p`
   color: ${({ theme }) => theme.grey};
-  font-family: ${({ theme }) => theme.lexend};
+  font-family: ${({ theme }) => theme.lexend}, Sans-Serif;
   width: 85%;
   @media (min-width: ${({ theme }) => theme.medium}) {
     width: 44ch;

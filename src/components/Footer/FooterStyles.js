@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;

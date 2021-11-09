@@ -15,7 +15,7 @@ export const Container = styled.div`
   h2 {
     font-size: 28px;
     margin: 15px auto;
-    font-family: ${({ theme }) => theme.mono};
+    font-family: ${({ theme }) => theme.mono}, Sans-Serif;
     color: ${({ theme }) => theme.dark};
     text-align: center;
   }
@@ -32,7 +32,7 @@ export const Wrap = styled.div`
   h2 {
     font-size: 18px;
     margin: 15px 20px;
-    font-family: ${({ theme }) => theme.mono};
+    font-family: ${({ theme }) => theme.mono}, Sans-Serif;
     color: ${({ theme }) => theme.dark};
     text-align: left;
   }
@@ -42,7 +42,7 @@ export const Wrap = styled.div`
 `;
 export const DropdownText = styled.div`
   p {
-    font-family: ${({ theme }) => theme.lexend};
+    font-family: ${({ theme }) => theme.lexend}, Sans-Serif;
     color: ${({ theme }) => theme.dark};
     background-color: ${({ theme }) => theme.snow};
     padding: 20px 15px;

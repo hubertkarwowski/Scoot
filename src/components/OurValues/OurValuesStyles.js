@@ -4,7 +4,7 @@ export const Section = styled.section`
   margin: 20px 0;
   h2 {
     text-align: center;
-    font-family: ${({ theme }) => theme.mono};
+    font-family: ${({ theme }) => theme.mono}, Sans-Serif;
     color: ${({ theme }) => theme.dark};
   }
 `;
@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
 
   @media (min-width: ${({ theme }) => theme.large}) {
     flex-direction: row;
@@ -36,7 +36,7 @@ export const Container = styled.div`
     font-size: 24px;
   }
   p {
-    font-family: ${({ theme }) => theme.lexend};
+    font-family: ${({ theme }) => theme.lexend}, Sans-Serif;
 
     color: ${({ theme }) => theme.grey};
   }

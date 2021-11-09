@@ -10,6 +10,6 @@ export const theme = {
   medium: "768px",
   large: "1024px",
   xlarge: "1440px",
-  mono: "Space Mono, sans-serif",
-  lexend: "Lexend Deca , sans-serif",
+  mono: "Space Mono",
+  lexend: "Lexend Deca",
 };

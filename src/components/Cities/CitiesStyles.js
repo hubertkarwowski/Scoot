@@ -40,7 +40,7 @@ export const City = styled.div`
     font-size: 24px;
     text-align: center;
     padding: 10px;
-    font-family: ${({ theme }) => theme.mono};
+    font-family: ${({ theme }) => theme.mono}, Sans-Serif;
     color: ${({ theme }) => theme.dark};
   }
   @media (min-width: ${({ theme }) => theme.mobile}) {
@@ -69,13 +69,13 @@ export const Info = styled.div`
   }
 `;
 export const InfoHeading = styled.h2`
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   color: ${({ theme }) => theme.dark};
   font-size: 32px;
   margin-top: 40px;
 `;
 export const InfoSubheading = styled.p`
-  font-family: ${({ theme }) => theme.lexend};
+  font-family: ${({ theme }) => theme.lexend}, Sans-Serif;
   color: ${({ theme }) => theme.grey};
   padding: 25px 0;
 `;

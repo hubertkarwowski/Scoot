@@ -7,7 +7,7 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.yellow};
   width: 195px;
   height: 53px;
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   font-size: 15px;
   &:hover {
     background-color: ${({ theme }) => theme.white};

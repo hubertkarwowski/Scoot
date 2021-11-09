@@ -60,7 +60,7 @@ export const TextContainer = styled.div`
   }
 `;
 export const Heading = styled.h3`
-  font-family: ${({ theme }) => theme.mono};
+  font-family: ${({ theme }) => theme.mono}, Sans-Serif;
   width: 15ch;
   font-size: 32px;
   color: ${({ theme }) => theme.dark};
@@ -74,7 +74,7 @@ export const Heading = styled.h3`
   }
 `;
 export const SubHeading = styled.p`
-  font-family: ${({ theme }) => theme.lexend};
+  font-family: ${({ theme }) => theme.lexend}, Sans-Serif;
   color: ${({ theme }) => theme.grey};
   width: 80%;
   margin: 20px 0;
