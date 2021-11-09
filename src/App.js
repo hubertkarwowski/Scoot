@@ -7,6 +7,8 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "styled-components";
 import About from "./pages/About/About";
+import Careers from "./pages/Careers/Careers";
+import Locations from "./pages/Locations/Locations";
 
 function App() {
   return (
@@ -23,10 +25,10 @@ function App() {
               <About />
             </Route>
             <Route path="/location">
-              <Home />
+              <Locations />
             </Route>
             <Route path="/careers">
-              <Home />
+              <Careers />
             </Route>
           </Switch>
 
