@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ReactComponent as Locate } from "../../assets/icons/locate.svg";
 import { ReactComponent as Scooter } from "../../assets/icons/scooter.svg";
 import { ReactComponent as Ride } from "../../assets/icons/ride.svg";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import {
   Heading,
@@ -13,9 +16,12 @@ import {
 } from "./StepsSectionStyles";
 
 function StepsSection() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, offset: 280, once: true });
+  }, []);
   return (
     <StepsContainer>
-      <StepsDiv>
+      <StepsDiv data-aos="fade-right">
         <Icon>
           <Locate />
         </Icon>
@@ -28,7 +34,7 @@ function StepsSection() {
           </SubHeading>
         </InfoContainer>
       </StepsDiv>
-      <StepsDiv>
+      <StepsDiv data-aos="fade-right">
         <Icon>
           <Scooter />
         </Icon>
@@ -41,7 +47,7 @@ function StepsSection() {
           </SubHeading>
         </InfoContainer>
       </StepsDiv>
-      <StepsDiv>
+      <StepsDiv data-aos="fade-right">
         <Icon>
           <Ride />
         </Icon>

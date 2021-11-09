@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Data } from "./data";
 import { ReactComponent as Icon } from "../../assets/icons/chevron.svg";
 import {
@@ -7,6 +7,9 @@ import {
   DropdownText,
   Wrap,
 } from "./DropdownStyles";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Dropdown() {
   const [clicked, setClicked] = useState(false);
@@ -17,9 +20,12 @@ function Dropdown() {
     }
     setClicked(index);
   };
+  useEffect(() => {
+    Aos.init({ duration: 1000, offset: 380, once: true });
+  }, []);
   return (
     <AccordionSection>
-      <Container>
+      <Container data-aos="zoom-in">
         <h2>How it works</h2>
         {Data.map((item, index) => {
           return (

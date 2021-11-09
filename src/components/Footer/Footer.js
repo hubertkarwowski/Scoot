@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import { ReactComponent as Twitter } from "../../assets/icons/twitter.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/instagram.svg";
 import Google from "../../assets/icons/google-play.svg";
 import Apple from "../../assets/icons/app-store.svg";
 import Circles from "../../assets/patterns/semi-circles.svg";
+
 import {
   BottomDiv,
   CirclesDiv,

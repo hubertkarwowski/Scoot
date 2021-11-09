@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../../globalStyles/button";
+
 import {
   NavbarWrapper,
   NavButton,
@@ -10,7 +11,6 @@ import {
   NavLogo,
 } from "./NavbarStyles";
 import { ReactComponent as Burger } from "../../assets/icons/hamburger.svg";
-import { ReactComponent as Close } from "../../assets/icons/close.svg";
 import SideDrawer from "./SideDrawer";
 import { Fragment } from "react";
 import { BurgerPlaceholder } from "./SideDrawerStyles";

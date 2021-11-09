@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "../../globalStyles/button";
 import {
   ButtonDiv,
@@ -11,16 +11,21 @@ import {
   TextContainer,
 } from "./InfoStyles";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 import Img1 from "../../assets/images/telemetry.jpg";
 import Img2 from "../../assets/images/near-you.jpg";
 import Img3 from "../../assets/images/payments.jpg";
 import Circle from "../../assets/patterns/circle.svg";
-import { CircleDiv } from "../Hero/HeroStyles";
 
 function Info() {
+  useEffect(() => {
+    Aos.init({ duration: 1000, offset: 280, once: true });
+  }, []);
   return (
     <InfoSection>
-      <InfoDiv>
+      <InfoDiv data-aos="fade-right">
         <ImageContainer>
           <img src={Img1} alt="img1" />
 
@@ -39,7 +44,7 @@ function Info() {
           </ButtonDiv>
         </TextContainer>
       </InfoDiv>
-      <InfoDiv>
+      <InfoDiv data-aos="fade-left">
         <ImageContainer>
           <img src={Img2} alt="img2" />
 
@@ -58,7 +63,7 @@ function Info() {
           </ButtonDiv>
         </TextContainer>
       </InfoDiv>
-      <InfoDiv>
+      <InfoDiv data-aos="fade-right">
         <ImageContainer>
           <img src={Img3} alt="img3" />
 
