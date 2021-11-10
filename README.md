@@ -32,7 +32,7 @@ This design is provided by <b>https://www.frontendmentor.io/</b><br/>
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/hubertkarwowski/shop.git
+   git clone https://github.com/hubertkarwowski/Scoot.git
    ```
 2. Install NPM packages
    ```sh
