@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Button } from "../../globalStyles/button";
 import {
   ButtonDiv,
-  CircleImg,
   Heading,
   ImageContainer,
   InfoDiv,

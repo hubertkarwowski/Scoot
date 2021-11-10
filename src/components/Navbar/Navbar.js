@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "../../globalStyles/button";
 
 import {
@@ -18,7 +18,6 @@ import { BurgerPlaceholder } from "./SideDrawerStyles";
 function Navbar() {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
   const drawerToggleClickHandler = () => {
-    console.log("lmao");
     setSideDrawerOpen(!sideDrawerOpen);
   };
   let sideDrawer;
@@ -42,11 +41,11 @@ function Navbar() {
               <NavList>About</NavList>
             </NavLink>
 
-            <NavLink exact to="/location">
+            <NavLink to="/location">
               <NavList>Location</NavList>
             </NavLink>
 
-            <NavLink exact to="/careers">
+            <NavLink to="/careers">
               <NavList>Careers</NavList>
             </NavLink>
           </Navigation>
