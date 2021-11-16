@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
 </p>
 
-## Link to website = > https://scoot-website.herokuapp.com/
+## Link to website = > https://fir-hosting-scoot.web.app/
 
 This design is provided by <b>https://www.frontendmentor.io/</b><br/>
 <b> I coded it myself</b>
