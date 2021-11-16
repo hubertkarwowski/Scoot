@@ -36,6 +36,7 @@ export const NavList = styled.li`
 `;
 export const NavButton = styled.div`
   margin-right: 13%;
+  cursor: pointer;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     display: none;
   }

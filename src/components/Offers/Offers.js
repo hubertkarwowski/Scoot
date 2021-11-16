@@ -14,7 +14,7 @@ function Offers() {
     <OffersSection>
       {Data.map((item, index) => {
         return (
-          <Card data-aos="zoom-in">
+          <Card key={index} data-aos="zoom-in">
             <Text>
               <h2>{item.position}</h2>
               <p>{item.location}</p>
